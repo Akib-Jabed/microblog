@@ -1,0 +1,25 @@
+body{
+    margin-top: 5rem;
+    background: brown;
+    color: bisque;
+}
+
+.content-section{
+    border: 1px solid ghostwhite;
+    margin-bottom: 10px;
+}
+
+.account-img{
+    height: 150px;
+    width: 150px;
+}
+
+.media-content{
+    padding-bottom: 10px;
+}
+
+.article-img{
+    height: 75px;
+    width: 75px;
+    padding: 2px;
+}

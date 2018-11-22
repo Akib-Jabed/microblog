@@ -16,10 +16,10 @@
             <ul class="navbar-nav">
                 {% if current_user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('posts.new_post') }}">New Post</a>
+                        <a class="nav-link" href="{{ url_for('users.account') }}">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('users.account') }}">Account</a>
+                        <a class="nav-link" href="{{ url_for('posts.new_post') }}">Create Post</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('users.logout') }}">Logout</a>

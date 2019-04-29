@@ -56,6 +56,7 @@ def reset_password_request():
     if form.validate_on_submit():
         _user = User.query.filter_by(email=form.email.data).first()
         if _user:
+            # print(_user)
             send_password_reset_email(_user)
         flash('Check your email for the instructions to reset your password')
         return redirect(url_for('auth.login'))
@@ -64,7 +65,7 @@ def reset_password_request():
 
 @bp.route('/reset_password/<token>', methods=['GET', 'POST'])
 def reset_password(token):
-    if current_user.is_authentcated:
+    if current_user.is_authenticated:
         return redirect(url_for('main.index'))
     _user = User.verify_reset_password_token(token)
     if not _user:

@@ -34,7 +34,10 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+.env
+.flaskenv
 
 venv
+migrations
 app.db
 microblog.log*

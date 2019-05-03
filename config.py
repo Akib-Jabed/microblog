@@ -15,6 +15,6 @@ class Config(object):
     MAIL_USE_TLS = bool(os.environ.get('MAIL_USE_TLS')) or True
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = ['a.jabed.ban@gmail.com']
+    ADMINS = [<admin-mails>]
     POST_PER_PAGE = 3
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')

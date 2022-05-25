@@ -27,7 +27,7 @@ Mako==1.0.7
 MarkupSafe==1.0
 mccabe==0.6.1
 psycopg2==2.8.2
-PyJWT==1.5.3
+PyJWT==2.4.0
 pylint==2.3.1
 python-dateutil==2.6.1
 python-dotenv==0.7.1

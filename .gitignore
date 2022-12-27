@@ -38,6 +38,6 @@ nosetests.xml
 .flaskenv
 
 venv
-migrations
 app.db
 microblog.log*
+

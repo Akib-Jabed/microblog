@@ -17,13 +17,6 @@
     {% endfor %}
   </p>
   <p>
-    {{ form.email.label }} <br />
-    {{ form.email(size=32) }} <br />
-    {% for error in form.email.errors %}
-    <span style="color: #e22929; font-size: 14px">{{ error}}</span>
-    {% endfor %}
-  </p>
-  <p>
     {{ form.password.label }} <br />
     {{ form.password(size=32) }} <br />
     {% for error in form.password.errors %}

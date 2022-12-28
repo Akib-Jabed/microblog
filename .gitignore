@@ -36,8 +36,9 @@ nosetests.xml
 .pydevproject
 .env
 .flaskenv
+.idea
 
 venv
-app.db
+*.db
 microblog.log*
 

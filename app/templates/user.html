@@ -16,12 +16,12 @@
       {% if user == current_user %}
       <p><a href="{{ url_for('edit_profile') }}">Edit Profile</a></p>
       {% elif not current_user.is_following(user) %}
-        <p>
-          <form action="{{ url_for('follow_user', username=user.username) }}" method="POST">
-            {{ form.hidden_tag() }}
-            {{ form.submit(value='Follow') }}
-          </form>
-        </p>
+      <p>
+        <form action="{{ url_for('follow_user', username=user.username) }}" method="POST">
+          {{ form.hidden_tag() }}
+          {{ form.submit(value='Follow') }}
+        </form>
+      </p>
       {% else %}
       <p>
         <form action="{{ url_for('unfollow_user', username=user.username) }}" method="POST">
@@ -34,4 +34,14 @@
   </tr>
 </table>
 <hr />
-{% for post in posts %} {% include "_post.html" %} {% endfor %} {% endblock %}
+{% for post in posts %} 
+  {% include "_post.html" %} 
+{% endfor %} 
+{% if prev_url %}
+  <a href="{{ prev_url }}">Newer Posts</a>
+{% endif %} 
+{% if next_url %}
+  <a href="{{ next_url }}">Older Posts</a>
+{% endif %}
+{% endblock %}
+  

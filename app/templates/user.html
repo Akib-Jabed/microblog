@@ -1,6 +1,21 @@
 {% extends "base.html" %} {% block content %}
-<h1>User: {{ user.username }}</h1>
+<table>
+  <tr valign="top">
+    <td><img src="{{ user.avatar(128) }}" alt="Avatar of user" /></td>
+    <td><h1>User: {{ user.username }}</h1></td>
+  </tr>
+</table>
 <hr />
 {% for post in posts %}
-<p><b>{{ post.author.username }}</b> says: {{ post.body }}</p>
+<table>
+  <tr valign="top">
+    <td>
+      <img src="{{ post.author.avatar(36) }}" alt="Avatar of post author" />
+    </td>
+    <td>
+      <b>{{ post.author.username }}</b><br />
+      says: {{ post.body }}
+    </td>
+  </tr>
+</table>
 {% endfor %} {% endblock %}

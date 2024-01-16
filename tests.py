@@ -2,6 +2,7 @@ import os
 os.environ['DATABASE_URL'] = 'sqlite://'
 
 from datetime import datetime, timezone, timedelta
+from hashlib import md5
 import unittest
 from app import app, db
 from app.models import User, Post
@@ -23,6 +24,11 @@ class UserModelCase(unittest.TestCase):
         u.set_password('cat')
         self.assertTrue(u.check_password('cat'))
         self.assertFalse(u.check_password('dog'))
+        
+    def test_avatar(self):
+        u = User(username='john', email='john@email.com')
+        digest = md5('john@email.com'.encode('utf-8')).hexdigest()
+        self.assertEqual(u.avatar(128), (f'https://www.gravatar.com/avatar/{digest}?d=identicon&s=128'))
         
     def test_follow(self):
         u1 = User(username='john', email='john@gmail.com')

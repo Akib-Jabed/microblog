@@ -4,8 +4,11 @@
       <img src="{{ post.author.avatar(36) }}" alt="Avatar of post author" />
     </td>
     <td>
-      <b>{{ post.author.username }}</b><br />
-      says: {{ post.body }}
+      <a href="{{ url_for('user', username=post.author.username) }}">
+        <b>{{ post.author.username }}</b>
+      </a>
+      says:<br />
+      {{ post.body }}
     </td>
   </tr>
 </table>

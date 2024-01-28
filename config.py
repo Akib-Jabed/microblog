@@ -12,4 +12,4 @@ class Config:
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['info@microblog.com']
-    POSTS_PER_PAGE=25
+    POSTS_PER_PAGE=20
